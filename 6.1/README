@@ -1,17 +1,12 @@
 # 4.2 README
 
-First, and probably least important: I actually got all of my files onto github in the right place and saved onto the homework page
-without any issues whatsoever.
+First, and probably least important: I actually got all of my files onto github in the right place and saved onto the homework page without any issues whatsoever.
 
-This was such a fun project to do, even though it gave me hell every step of the way. After trying and trying with exactly zero
-working results, I finally resorted to copying the code directly from the 6-1 instructional video given, and somehow managed to
-screw that up as well.  After finding the smiley face class example, things cleared up a little bit, since I had something to work
-off of.  From there I did my best to grasp the concept of classes and get all three of my files working together in the right way.
-Modification of what I'd made was where things got tough.  I managed to create separate circles that turn into squares when the
-mouse is held down, and now instead of the circles bouncing off the walls when they meet a boundary, they appear back in a
-different place. There were lots of other things that I attempted to do, but figuring out where to place the commands I wanted
+This was such a fun project to do, even though it fought me every step of the way. After trying and trying with exactly zero working results, I finally resorted to copying the code directly from the 6-1 instructional video given, and somehow managed to 
+screw that up as well.  After finding the smiley face class example, things cleared up a little bit, since I had something to work off of.  From there I did my best to grasp the concept of classes and get all three of my files working together in the right way. 
+Modification of what I'd made was where things got tough. I managed to create separate circles that turn into squares when the mouse is held down, and now instead of the circles bouncing off the walls when they meet a boundary, they appear back in a different place. There were lots of other things that I attempted to do, but figuring out where to place the commands I wanted
 in a way that would not render the code useless was nearly impossible.  By 1 a.m. I thought it was probably time to call it good.
 
-Every time I finish a homework assignment I feel a little more confident and a little more lost at the same time.  For the
-most part I understand how to create the things I am trying to create.  My problem is figuring out where to put certain
+Every time I finish a homework assignment I feel a little more confident and a little more lost at the same time. For the
+most part I understand how to create the things I am trying to create. My problem is figuring out where to put certain
 parts of the code in order for them to work.
