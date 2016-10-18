@@ -5,10 +5,10 @@ function PacMan(){ //defining parameters for PacMan class
   this.arcHeight = 50;
   this.posX = 30;
   this.posY = 30;
-  this.speedX = 10;
-  this.speedY = 10;
-  this.dirX = 1;
-  this.dirY = 1;
+  this.speedX = 5;
+  this.speedY = 5;
+  this.dirX = random(1,-1);
+  this.dirY = [1,-1];
   this.r = random(200,256); //r,g, and b are intended to keep PacMan's fill in a range of purple,pink, and green
   this.g = random(256);
   this.b = random(140,256);
@@ -31,4 +31,10 @@ PacMan.prototype.drawPacMan = function(){
   ellipse(this.eyeX, this.eyeY, this.eyeD); //actual eye
 
   pop();
+  this.move();
+};
+
+PacMan.prototype.move = function() {
+  this.posX = this.posX + (this.speedX * this.dirX);
+
 }
