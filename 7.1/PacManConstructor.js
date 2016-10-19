@@ -114,7 +114,7 @@ PacMan.prototype.move = function() {
     translate(width/2, height/2); //PacMan SHOULD rotate 90 degrees when moving down
     rotate(270);
   }
-  scale(1.5, 1.3); //?
+  //scale(-1, 1); //this is what you need but it's in the wrong place
 
   text(this.timeElapsed + " : " + this.maxTime, 50, 50);
   text(this.direction + " -- " + this.speed + " : " + this.posX + " -- " + this.speed + " : " + this.posY, 50, 60);
