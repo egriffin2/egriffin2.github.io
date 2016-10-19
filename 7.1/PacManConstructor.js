@@ -100,9 +100,9 @@ PacMan.prototype.move = function() {
     this.speed = 0;
   }
 
-  this.mouth = -this.mouth
-  if (this.mouth < 0) {
-    this.mouth = this.mouth + 1;
+  this.mouth = this.mouth - 1;
+  if (this.mouth <= 0) {
+    this.mouth = 45; //OH MY GOD I DID A THING
   }
 
   /*if (this.direction == 3) {
