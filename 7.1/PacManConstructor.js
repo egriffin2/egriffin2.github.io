@@ -17,7 +17,7 @@ function PacMan(){ //defining parameters for PacMan class
   this.direction = 0; //will be up,down,right, or left
   this.timeElapsed = 0; //0 frames or seconds have elapsed at the beginning of the sketch
   this.maxTime = 240; //240 frames or 4 seconds is the longest PacMan will move
-  this.mouth = 330;
+  this.mouth = 45;
 
   // mouth size
   this.arcWidth = 50;
@@ -41,7 +41,7 @@ PacMan.prototype.drawPacMan = function(){ //create PacMan
   translate(this.posX, this.posY); //places PacMan
   fill(this.r,this.g,this.b);
   angleMode(DEGREES);
-  arc(0, 0, this.arcWidth,this.arcHeight, 25,this.mouth, PIE); //creating PacMan arc
+  arc(0, 0, this.arcWidth,this.arcHeight, this.mouth,-this.mouth, PIE); //creating PacMan arc
 
   noStroke();
   fill(0); //black eye
@@ -53,9 +53,9 @@ PacMan.prototype.drawPacMan = function(){ //create PacMan
 
 PacMan.prototype.move = function() {
 
-  this.posX = this.posX + (this.speed * this.dirX);
-  this.posY = this.posY + (this.speed * this.dirY);
-
+  this.posX = this.posX + (this.speed * this.dirX); //PacMan is moving horizontally
+  this.posY = this.posY + (this.speed * this.dirY); //PacMan is moving vertically
+//set basic PacMan directions
   if (this.direction == 0) { //direction 0 = right
     this.dirX = 1;
     this.dirY = 0;
@@ -69,8 +69,8 @@ PacMan.prototype.move = function() {
     this.dirX = 0;
     this.dirY = 1;
   }
-
-  this.timeElapsed++;
+//PacMan is on a timer
+  this.timeElapsed++; //timeElapsed is increasing
   if (this.timeElapsed >= this.maxTime) {
     var tempDir;
     this.timeElapsed = 0; //timer starts over
@@ -82,7 +82,6 @@ PacMan.prototype.move = function() {
     this.direction = tempDir; //direction will be an integer b/t 0 and 4
     this.speed = random(0,4);
   }
-
 
   if (this.posX > width - this.arcWidth/2 - 1) {
     this.posX = width - this.arcWidth/2 - 1;
@@ -101,20 +100,20 @@ PacMan.prototype.move = function() {
     this.speed = 0;
   }
 
-  this.mouth++;
-  if (this.mouth >=380) {
-    this.mouth = this.mouth - 1;
+  this.mouth = -this.mouth
+  if (this.mouth < 0) {
+    this.mouth = this.mouth + 1;
   }
 
-  if (this.direction == 3) {
+  /*if (this.direction == 3) {
     translate(width/2, height/2); //PacMan SHOULD rotate 90 degrees when moving down
-    rotate(90);
-  }
+    rotate(90); /
+  }*/
   if (this.direction == 2) {
     translate(width/2, height/2); //PacMan SHOULD rotate 90 degrees when moving down
     rotate(270);
   }
-  //scale(-1, 1); //this is what you need but it's in the wrong place
+    //scale(-1, 1); //this is what you need but you're doing it wrong
 
   text(this.timeElapsed + " : " + this.maxTime, 50, 50);
   text(this.direction + " -- " + this.speed + " : " + this.posX + " -- " + this.speed + " : " + this.posY, 50, 60);
