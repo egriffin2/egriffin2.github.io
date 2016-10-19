@@ -11,13 +11,13 @@ function PacMan(){ //defining parameters for PacMan class
   this.posX = 100;
   this.posY = 100;
   this.speed = 5;
-  this.speed = 5;
   this.dirX = 1;
   this.dirY = 1;
   this.direction = 0; //will be up,down,right, or left
   this.timeElapsed = 0; //0 frames or seconds have elapsed at the beginning of the sketch
   this.maxTime = 240; //240 frames or 4 seconds is the longest PacMan will move
   this.mouth = 45;
+  this.mouthChange = -1;
 
   // mouth size
   this.arcWidth = 50;
@@ -41,6 +41,15 @@ PacMan.prototype.drawPacMan = function(){ //create PacMan
   translate(this.posX, this.posY); //places PacMan
   fill(this.r,this.g,this.b);
   angleMode(DEGREES);
+  if (this.direction == 1) {
+    scale(-1,1);
+  }
+  if (this.direction == 2) {
+    rotate(270);
+  }
+  if (this.direction == 3) {
+    rotate(90);
+  }
   arc(0, 0, this.arcWidth,this.arcHeight, this.mouth,-this.mouth, PIE); //creating PacMan arc
 
   noStroke();
@@ -99,21 +108,11 @@ PacMan.prototype.move = function() {
     this.posY = this.arcHeight/2 + 2;
     this.speed = 0;
   }
-
-  this.mouth = this.mouth - 1;
-  if (this.mouth <= 0) {
-    this.mouth = 45; //OH MY GOD I DID A THING
+//mouth movement
+  this.mouth = this.mouth + this.mouthChange;
+  if (this.mouth <= 1 || this.mouth >= 45) {
+    this.mouthChange = -this.mouthChange;
   }
-
-  /*if (this.direction == 3) {
-    translate(width/2, height/2); //PacMan SHOULD rotate 90 degrees when moving down
-    rotate(90); /
-  }*/
-  if (this.direction == 2) {
-    translate(width/2, height/2); //PacMan SHOULD rotate 90 degrees when moving down
-    rotate(270);
-  }
-    //scale(-1, 1); //this is what you need but you're doing it wrong
 
   text(this.timeElapsed + " : " + this.maxTime, 50, 50);
   text(this.direction + " -- " + this.speed + " : " + this.posX + " -- " + this.speed + " : " + this.posY, 50, 60);
