@@ -12,6 +12,7 @@ function PacMan(){ //defining parameters for PacMan class
   this.maxTime = 240; //240 frames or 4 seconds is the longest PacMan will move
   this.mouth = 45;
   this.mouthChange = -1;
+  this.wait = false;
 
   // pacman size
   this.arcWidth = 50;
@@ -35,6 +36,7 @@ PacMan.prototype.checkNeighbors = function(pacArray, myIndex){
   var distance = 0;
   var minDist = 0;
 
+  this.wait = false;
   for (var i = 0; i < pacArray.length; i++) { //check position of this pacman to others
     if (i != myIndex){
       otherX = pacArray[i].posX;
@@ -47,14 +49,15 @@ PacMan.prototype.checkNeighbors = function(pacArray, myIndex){
 
 
       if (distance <= minDist) {
-            this.speed = 0
-            do {
-              tempDir = int(random(0,4));
-            }
-            while (this.direction == tempDir);
-            this.direction = tempDir; //direction will be an integer b/t 0 and 4
-            this.speed = random(0,4);
-
+        if (this.direction == 0 && otherX > this.posX) {
+          this.wait = true;
+      }  else if (this.direction == 1 && otherX < this.posX) {
+          this.wait = true;
+      }  else if (this.direction == 2 && otherY < this.posY) {
+          this.wait = true;
+      }  else if (this.direction == 3 && otherY > this.posY) {
+          this.wait = true;
+        }
       }
     }
   }
@@ -87,9 +90,12 @@ PacMan.prototype.drawPacMan = function(){ //create PacMan
 
 PacMan.prototype.move = function() {
 
+  if (!this.wait) {
   this.posX = this.posX + (this.speed * this.dirX); //PacMan is moving horizontally
   this.posY = this.posY + (this.speed * this.dirY); //PacMan is moving vertically
+  }
 //set basic PacMan directions
+
   if (this.direction == 0) { //direction 0 = right
     this.dirX = 1;
     this.dirY = 0;
