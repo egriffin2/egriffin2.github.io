@@ -41,13 +41,13 @@ PacMan.prototype.drawPacMan = function(){ //create PacMan
   translate(this.posX, this.posY); //places PacMan
   fill(this.r,this.g,this.b);
   angleMode(DEGREES);
-  if (this.direction == 1) {
+  if (this.direction == 1) { //move left look left
     scale(-1,1);
   }
-  if (this.direction == 2) {
+  if (this.direction == 2) { //move up look up
     rotate(270);
   }
-  if (this.direction == 3) {
+  if (this.direction == 3) { //move down look down
     rotate(90);
   }
   arc(0, 0, this.arcWidth,this.arcHeight, this.mouth,-this.mouth, PIE); //creating PacMan arc
@@ -91,21 +91,21 @@ PacMan.prototype.move = function() {
     this.direction = tempDir; //direction will be an integer b/t 0 and 4
     this.speed = random(0,4);
   }
-
+//
   if (this.posX > width - this.arcWidth/2 - 1) {
-    this.posX = width - this.arcWidth/2 - 1;
+    this.posX = width - this.arcWidth/2 - 10;
     this.speed = 0;
   }
   else if (this.posY > height - this.arcHeight/2 - 1) {
-    this.posY = height - this.arcHeight/2 - 1;
+    this.posY = height - this.arcHeight/2 - 10;
     this.speed = 0;
   }
   else if (this.posX < 0 + this.arcWidth/2 + 1) {
-    this.posX = this.arcWidth/2 + 2;
+    this.posX = this.arcWidth/2 + 10;
     this.speed = 0;
   }
   else if (this.posY < 0 + this.arcHeight/2 + 1) {
-    this.posY = this.arcHeight/2 + 2;
+    this.posY = this.arcHeight/2 + 10;
     this.speed = 0;
   }
 //mouth movement
