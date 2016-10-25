@@ -1,5 +1,5 @@
 var pacArray = [];
-var numPacs = 1;
+var numPacs = 5;
 
 function setup() {
   createCanvas(800,400);

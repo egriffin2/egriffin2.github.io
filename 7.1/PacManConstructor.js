@@ -1,15 +1,9 @@
-/*
-TODO:
-1. make his mouth move
-2. direction (use rotate and scale)
-/*/
-
 
 function PacMan(){ //defining parameters for PacMan class
 
   // These are position parameters
-  this.posX = 100;
-  this.posY = 100;
+  this.posX = random(width);
+  this.posY = random(height);
   this.speed = 5;
   this.dirX = 1;
   this.dirY = 1;
@@ -19,9 +13,10 @@ function PacMan(){ //defining parameters for PacMan class
   this.mouth = 45;
   this.mouthChange = -1;
 
-  // mouth size
+  // pacman size
   this.arcWidth = 50;
   this.arcHeight = 50;
+  this.radius = this.arcWidth * 0.5;
   // eye parameters
   this.eyeX = 0; //eye x-coordinate
   this.eyeY = -13; //eye y-coordinate
@@ -33,7 +28,37 @@ function PacMan(){ //defining parameters for PacMan class
   this.b = random(256);
 
 }
+PacMan.prototype.checkNeighbors = function(pacArray, myIndex){
+  var otherX = 0;
+  var otherY = 0;
+  var otherRadius = 0;
+  var distance = 0;
+  var minDist = 0;
 
+  for (var i = 0; i < pacArray.length; i++) { //check position of this pacman to others
+    if (i != myIndex){
+      otherX = pacArray[i].posX;
+      otherY = pacArray[i].posY;
+      otherRadius = pacArray[i].radius;
+      distance = dist(otherX, otherY, this.posX, this.posY);
+      otherSpeed = pacArray[i].speed;
+
+      minDist = otherRadius + this.radius + otherSpeed + this.speed;
+
+
+      if (distance <= minDist) {
+            this.speed = 0
+            do {
+              tempDir = int(random(0,4));
+            }
+            while (this.direction == tempDir);
+            this.direction = tempDir; //direction will be an integer b/t 0 and 4
+            this.speed = random(0,4);
+
+      }
+    }
+  }
+}
 PacMan.prototype.drawPacMan = function(){ //create PacMan
   push();
 
