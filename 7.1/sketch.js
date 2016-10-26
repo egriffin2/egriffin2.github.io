@@ -1,8 +1,8 @@
 var pacArray = [];
-var numPacs = 40;
+var numPacs = 10;
 
 function setup() {
-  createCanvas(1000,800);
+  createCanvas(800,500);
 
   for (var i = 0; i < numPacs; i++) {
     pacArray.push(new PacMan());
