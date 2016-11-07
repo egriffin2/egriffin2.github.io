@@ -1,4 +1,4 @@
-# H3  7.2 README
+#  7.2 README
 
 This assignment turned out looking really simple which frustrates me because I had no issue actually bringing data in and using
 it once I got the API key to work. I was trying to get more inventive with what exactly I was doing with the data, but for
