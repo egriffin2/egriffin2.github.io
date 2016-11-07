@@ -49,7 +49,7 @@ function drawWeather(weather) {
     fill(255,255,0);
     rect(temp*.5, temp*.5, 30,30);
 
-    fill(255);
+    fill(255,155,55);
     /*ellipse(x,300,wSpeed*50,wSpeed*50); //ellipse w/ width & height both 50 * the wind speed
     x = x + speed;/*/
     while (x < width) {
