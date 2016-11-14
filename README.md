@@ -27,4 +27,4 @@ I am really hoping that [this guy's page] (https://www.patrick-wied.at/blog/how-
     12/5 : Movement must be completely done and perfected.  This is not the time to be messing around.
     12/7 : I'm really hoping that color doesn't ACTUALLY take me this entire week, but in case it does we're going to say that I'll at least have my colors changing, if not completely coordinated.
     12/12 : Project is due.
-  For whatever reason, my links aren't working.  Good times.
+    <p> For whatever reason, my links aren't showing up like they're supposed to.  Good times. </p>
