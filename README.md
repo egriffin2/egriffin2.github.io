@@ -12,7 +12,7 @@ sound within the music, the color of the pulse ring would reflect the volume of 
 </p>
 
 <p>
-I am really hoping that [this guy's page] (https://www.patrick-wied.at/blog/how-to-create-audio-visualizations-with-javascript-html.com) will be able to help me out a little bit and that I am actually capable of doing this (I'm pretty sure I am but I'm concerned that an unexpected problem will prove me wrong).  Either way, his page looks like it will probably be a really good resource for this particular project. </p>
+I am really hoping that [this guy's page] (https://www.patrick-wied.at/blog/how-to-create-audio-visualizations-with-javascript-html) will be able to help me out a little bit and that I am actually capable of doing this (I'm pretty sure I am but I'm concerned that an unexpected problem will prove me wrong).  Either way, his page looks like it will probably be a really good resource for this particular project. </p>
 
 <h3>Sub-Problems</h3>
 <p> First I'll need to find a song I need and figure out how to pull the data I need from the song so that I can use it within my piece.  I also will want to get my pulse circle set up and ready.  Next, I will have to link each individual circle of the pulse with each aspect of the song that I want to/can represent.  After that, I'll need to make sure that changes in the parts of the song that I have chosen will result in the correct movement of the parts of the pulse.  Lastly, I will need to make sure that the color of the individual pieces will reflect the volume. </p>
