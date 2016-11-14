@@ -3,7 +3,7 @@
 
 <h1>Final Project Proposal</h1>
 
-<p>For my final project I would like to create a music visualization piece that looks something like [these](https://w-labs.at/experiments/audioviz/)
+<p>For my final project I would like to create a music visualization piece that looks something like [these][https://w-labs.at/experiments/audioviz/]
 , preferably the pulse if possible. Of course, I don't want it to be exactly like this; I'd like to include some
 colors in the final product, preferably corresponding to volume (for example, if a ring of the pulse corresponded to a specific
 sound within the music, the color of the pulse ring would reflect the volume of that specific sound).  Somewhat like these:
