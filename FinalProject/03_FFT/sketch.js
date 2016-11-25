@@ -1,7 +1,7 @@
 var signal;
 
 function preload() {
-  signal = loadSound("../Audio/song1.mp3");
+  signal = loadSound("../Audio/galantis.runaway.mp3");
 }
 
 function setup() {
