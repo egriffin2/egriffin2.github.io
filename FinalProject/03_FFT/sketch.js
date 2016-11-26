@@ -1,7 +1,7 @@
 var signal;
 
 function preload() {
-  signal = loadSound("../Audio/galantis.runaway.mp3");
+  signal = loadSound("../Audio/ChangingOfTheSeasons.mp3");
 }
 
 function setup() {
@@ -22,7 +22,7 @@ function draw() {
   var trebleEnergy = fft.getEnergy("treble");
   var centroid = fft.getCentroid();
 
-  background(0);
+  //background(0);
 
   fill(255);
   ellipse(width/4,height/2,bassEnergy,bassEnergy);

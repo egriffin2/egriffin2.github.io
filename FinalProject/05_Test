@@ -1,0 +1,23 @@
+var signal;
+
+function preload() {
+  signal = loadSound("../Audio/galantis.runaway.mp3");
+}
+
+function setup() {
+
+  // Canvas Setup
+  createCanvas(windowWidth,windowHeight);
+
+  //  Audio Feature Extraction Setup
+  signal.play();
+  fft = new p5.FFT();
+
+}
+
+function draw() {
+
+var spectrum = fft.analyze();
+var bassEnergy = fft.getEnergy("bass");
+var trebleEnergy = fft.getEnergy("treble");
+var centroid = fft.getCentroid();
