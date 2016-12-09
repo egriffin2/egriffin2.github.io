@@ -233,7 +233,9 @@ function mySelectEvent() {
 //loading a new song
 function loadNewSong() {
   for (var i = 0; i < signal.length; i++) {
-    signal[i].pause();
+    if (signal[i] != null) {
+      signal[i].pause();
+    }
   };
   signal[songIDX].loop();
   signal[songIDX].jump(0);
