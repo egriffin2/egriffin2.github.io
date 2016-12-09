@@ -2,11 +2,14 @@ var signal = [];
 var songIDX = 0;
 var fft;
 var sel;
-var music = ["/Users/Emily/Documents/egriffin2.github.io/Audio/galantis.runaway.mp3", "../Audio/panic.gospel.mp3", "../Audio/traum.mp3", "../Audio/TheSound.mp3", "../Audio/ChangingOfTheSeasons.mp3", "../Audio/LightItUp.mp3", "../Audio/ofthenight.mp3"];
+var music = ["galantis.runaway.mp3", "panic.gospel.mp3", "traum.mp3", "TheSound.mp3", "ChangingOfTheSeasons.mp3", "LightItUp.mp3", "ofthenight.mp3"];
+var musicPath = "./Audio/";
 
 //load starting song
 function preload() {
-  signal[0] = loadSound("/Users/Emily/Documents/egriffin2.github.io/Audio/galantis.runaway.mp3");
+  console.log( musicPath + music[0] );
+  signal[0] = loadSound( musicPath + music[0]));
+
 }
 
 function setup() {
@@ -221,7 +224,7 @@ function mySelectEvent() {
     songIDX = 6;
   }
   if ( signal[songIDX] == null ) {
-    signal[songIDX] = loadSound(music[songIDX], loadNewSong);
+    signal[songIDX] = loadSound(musicPath + music[songIDX], loadNewSong);
   } else {
     loadNewSong();
   }
