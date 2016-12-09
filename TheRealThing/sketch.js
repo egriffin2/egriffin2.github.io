@@ -8,7 +8,7 @@ var musicPath = "./Audio/";
 //load starting song
 function preload() {
   console.log( musicPath + music[0] );
-  signal[0] = loadSound( musicPath + music[0]));
+  signal[0] = loadSound( musicPath + music[0]);
 
 }
 
