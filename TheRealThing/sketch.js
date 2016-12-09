@@ -132,7 +132,7 @@ function draw() {
   fill(255,50);
   strokeWeight(5);
   //centroid arc
-  stroke(255,0,255);
+  stroke(255,0,0);
   arc(width/2,height/4, 300, 300, centroid, HALF_PI);
   //bass arc
   stroke(0,0,255);
@@ -147,7 +147,7 @@ function draw() {
   stroke(0,255,255);
   arc(width/2,height/4, 100, 100, highMid, HALF_PI);
   //treble arc
-  stroke(255,0,0);
+  stroke(255,0,255);
   arc(width/2,height/4, 50, 50, treble, HALF_PI);
   pop();
 
@@ -199,10 +199,14 @@ function draw() {
 
   //Instruction
   fill(255);
-  textAlign(CENTER);
-  textFont("Market Deco");
-  textSize(22);
-  text("Select through the available songs from top to bottom.", width/1.5,height-30);
+  textAlign(RIGHT);
+  textFont("Times");
+  textSize(16);
+  text("Musical Movement", width-10, height-50);
+  text("By Emily Griffin", width-10,height-30);
+  text("Copyright 2016", width-10, height-10);
+  textAlign(LEFT);
+  text("Select New Song", 10,50);
 
 }
 //choosing the selected song
