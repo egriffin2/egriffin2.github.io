@@ -2,11 +2,11 @@ var signal = [];
 var songIDX = 0;
 var fft;
 var sel;
-var music = ["../Audio/galantis.runaway.mp3", "../Audio/panic.gospel.mp3", "../Audio/traum.mp3", "../Audio/TheSound.mp3", "../Audio/ChangingOfTheSeasons.mp3", "../Audio/LightItUp.mp3", "../Audio/ofthenight.mp3"];
+var music = ["/Users/Emily/Documents/egriffin2.github.io/Audio/galantis.runaway.mp3", "../Audio/panic.gospel.mp3", "../Audio/traum.mp3", "../Audio/TheSound.mp3", "../Audio/ChangingOfTheSeasons.mp3", "../Audio/LightItUp.mp3", "../Audio/ofthenight.mp3"];
 
 //load starting song
 function preload() {
-  signal[0] = loadSound("../Audio/galantis.runaway.mp3");
+  signal[0] = loadSound("/Users/Emily/Documents/egriffin2.github.io/Audio/galantis.runaway.mp3");
 }
 
 function setup() {
