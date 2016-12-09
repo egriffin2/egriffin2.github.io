@@ -202,7 +202,7 @@ function draw() {
   textAlign(RIGHT);
   textFont("Times");
   textSize(16);
-  text("Musical Movement", width-10, height-50);
+  text("Sound in Motion", width-10, height-50);
   text("By Emily Griffin", width-10,height-30);
   text("Copyright 2016", width-10, height-10);
   textAlign(LEFT);
