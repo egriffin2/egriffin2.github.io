@@ -7,7 +7,7 @@ var musicPath = "./Audio/";
 
 //load starting song
 function preload() {
-  console.log( musicPath + music[0] );
+  console.log( musicPath + music[0] ); //sets regular path to file where music is kept, loads mp3 file at music index
   signal[0] = loadSound( musicPath + music[0]);
 
 }
@@ -20,6 +20,7 @@ function setup() {
   textAlign(CENTER);
   sel = createSelect();
   sel.position(10, 10);
+  //inserting song names into the selection box
   sel.option('Runaway');
   sel.option('This Is Gospel');
   sel.option('Traum');
@@ -37,12 +38,20 @@ function setup() {
 
 function draw() {
 
-  blendMode(BLEND);
+  blendMode(BLEND); //this becomes relevant later on when the blending mode is changed
   angleMode(DEGREES);
   background(0);
 
   //variables
-  fft.analyze();
+  fft.analyze(); //fft is analyzed so that frequencies can be identified below
+  /*
+  Below I set each of the variables that I will
+  use when I start buliding in the draw function.
+  After initially being set, each of them is
+  mapped to a new set of values so that they
+  can be used when determining the qualities
+  of the arcs within the sketch.
+  /*/
   var bass = fft.getEnergy("bass");
   var treble = fft.getEnergy("treble");
   var lowMid = fft.getEnergy("lowMid");
@@ -58,7 +67,7 @@ function draw() {
 
   //BlendCircle
   push();
-  blendMode(SCREEN);
+  blendMode(SCREEN); //change blending mode to create additive color on one set of arcs
   noStroke();
   //bass arc
   fill(0,0,255);
@@ -197,7 +206,7 @@ function draw() {
   fill(124,68,230);
   arc(width/1.5,height/1.5, 50, 50, treble, HALF_PI);
 
-  //Instruction
+  //words that need to be on the sketch
   fill(255);
   textAlign(RIGHT);
   textFont("Times");
@@ -213,7 +222,7 @@ function draw() {
 function mySelectEvent() {
   var item = sel.value();
   if (item === "Runaway") {
-    songIDX = 0;
+    songIDX = 0; //Runaway is at song index 0 (and etc. for following files)
   } else if (item === "This Is Gospel") {
     songIDX = 1;
   } else if (item === "Traum") {
@@ -227,6 +236,11 @@ function mySelectEvent() {
   } else if (item === "Of The Night") {
     songIDX = 6;
   }
+  /*
+    BELOW: If nothing is selected, then load the song index.
+    Otherwise, pause the current song and jump to
+    the beginning of the newly selected song.
+  /*/
   if ( signal[songIDX] == null ) {
     signal[songIDX] = loadSound(musicPath + music[songIDX], loadNewSong);
   } else {
