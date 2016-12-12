@@ -7,7 +7,13 @@ create a set of arcs that move in time with music.  Each arc in each circle is a
 bass, low mid, mid, high mid, or treble.  This project offers the user the chance to choose from six songs and experience 
 the differences in the way each piece of music "looks".</p>
 <h2>Here's a quick peek at the process from beginning to end.</h2>
-[![Alt text for your video](https://www.youtube.com/watch?v=zaRsl1F_GAI&feature=youtu.be](https://www.youtube.com/watch?v=zaRsl1F_GAI&feature=youtu.be)
+<object width="425" height="350">
+  <param name="movie" value="https://www.youtube.com/watch?v=zaRsl1F_GAI&feature=youtu.be" />
+  <param name="wmode" value="transparent" />
+  <embed src="https://www.youtube.com/watch?v=zaRsl1F_GAI&feature=youtu.be"
+         type="application/x-shockwave-flash"
+         wmode="transparent" width="425" height="350" />
+</object>
 <p>For a more in depth look at the development of this piece, feel free to check out this <a href = "https://github.com/egriffin2/egriffin2.github.io/blob/master/TheRealThing/191FinalPaper.pdf">paper</a>
 detailing out the process and visual growth behind the project.</p>
 <h3> <a href = "https://egriffin2.github.io/TheRealThing/>Go see it!</a> </h3>
