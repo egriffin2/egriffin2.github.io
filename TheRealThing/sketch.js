@@ -216,6 +216,15 @@ function draw() {
   text("Copyright 2016", width-10, height-10);
   textAlign(LEFT);
   text("Select New Song", 10,50);
+  textSize(18);
+  text("Music:", width/30, height-125);
+  textSize(16);
+  text("Panic! At The Disco - This Is Gospel", width/30, height-105);
+  text("Cro - Traum", width/30, height-85);
+  text("The 1975 - The Sound", width/30, height-65);
+  text("Two Door Cinema Club - Changing of the Seasons", width/30, height-45);
+  text("Major Lazer - Light It Up", width/30, height-25);
+  text("Bastille - Of The Night", width/30, height-5);
 
 }
 //choosing the selected song
