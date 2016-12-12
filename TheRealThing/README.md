@@ -13,9 +13,9 @@ detailing out the process and visual growth behind the project.</p>
 <a href = "https://egriffin2.github.io/TheRealThing/">To the final project!(Help me out here, Github, it's 4 am.)</a>
 <h4>Music:</h4>
 <p>Galantis "Runaway"</p>
-<p>Panic! At The Disco "This Is Gospel</p>
+<p>Panic! At The Disco "This Is Gospel"</p>
 <p>Cro "Traum"</p>
-<p>The 1975 "The Sound</p>
+<p>The 1975 "The Sound"</p>
 <p>Two Door Cinema Club "Changing of the Seasons"</p>
 <p>Major Lazer "Light It Up"</p>
 <p>Bastille "Of The Night"</p>
