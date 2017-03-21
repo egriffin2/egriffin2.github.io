@@ -217,7 +217,7 @@ function draw() {
   textAlign(LEFT);
   text("Select New Song", 10,50);
   textSize(18);
-  text("Music:", width/30, height-140);
+  text("Music:", width/30, height-145);
   textSize(16);
   text("Galantis - Runaway", width/30, height-125)
   text("Panic! At The Disco - This Is Gospel", width/30, height-105);
